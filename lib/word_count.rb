@@ -4,9 +4,10 @@ class String
   def word_count (user_input)
     result = 0
     input_array = user_input.split(" ")
-    binding.pry
-    if input_array.include? self
-      result += 1
+    input_array.each do |match|
+      if self == match
+        result += 1
+      end
     end
     result
   end
