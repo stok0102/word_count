@@ -7,7 +7,7 @@ get('/') do
   erb(:index)
 end
 
-# get('/result') do
-#   @anagrams = params.fetch('user_word').anagrams(params.fetch('anagrams'))
-#   erb(:result)
-# end
+get('/result') do
+  @count = params.fetch('user_word').word_count(params.fetch('user_string'))
+  erb(:result)
+end
